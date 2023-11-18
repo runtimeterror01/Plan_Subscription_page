@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Include Bootstrap CSS and JavaScript -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Include your custom CSS -->
+    <style>
+        .highlighted {
+            background-color: #a09b9b; /* Highlight color */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://nextgrowthlabs.com/">NextGrowth labs</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary select-plan" data-toggle="modal"
+                            data-target="#">Sing-in</button>
+                    </li>
+                </ul>
+                <span class="navbar-text"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Subscription Plans</h1>
+        <p class="lead">Choose the perfect subscription plan for your needs on our website. We offer a range of options to suit your preferences and budget, whether you're looking for basic features or premium access. With flexible pricing and benefits tailored to you, finding the ideal plan has never been easier. Subscribe today for an enhanced experience!</p>
+      </div>
+
+    <!-- Pricing tables with buttons -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card pricing-table">
+                    <div class="card-body">
+                        <h5 class="card-title">Plan 1</h5>
+                        <h1 class="card-title pricing-card-title">$159 <small class="text-muted">/ mo</small></h1>
+                        <p class="card-text">0-10 Users</p>
+                        <button type="button" class="btn btn-primary select-plan" data-toggle="modal"
+                            data-target="#myModal">Select Plan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card pricing-table">
+                    <div class="card-body">
+                        <h5 class="card-title">Plan 2</h5>
+                        <h1 class="card-title pricing-card-title">$259 <small class="text-muted">/ mo</small></h1>
+                        <p class="card-text">11-20 Users</p>
+                        <button type="button" class="btn btn-primary select-plan" data-toggle="modal"
+                            data-target="#myModal">Select Plan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card pricing-table">
+                    <div class="card-body">
+                        <h5 class="card-title">Plan 3</h5>
+                        <h1 class="card-title pricing-card-title">$359 <small class="text-muted">/ mo</small></h1>
+                        <p class="card-text">21+ Users</p>
+                        <button type="button" class="btn btn-primary select-plan" data-toggle="modal"
+                            data-target="#myModal">Select Plan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Order Form</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <!-- Order form with Name, Email, and Order Comments fields -->
+                    <form action="https://forms.maakeetoo.com/formapi/764" method="POST"  id="orderForm">
+                        <div class="form-group">
+                            <label for="firstname">Name:</label>
+                            <input type="text" class="form-control" id="firstname" name="firstname">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Order Comments:</label>
+                            <textarea class="form-control" id="message" name="message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slider for selecting the number of users -->
+    <div class="container mt-4">
+        <label for="userSlider">Select Your Plan By User</label>
+        <input id="userSlider" type="range" min="0" max="30" step="10" value="0">
+        <button type="button" class="btn btn-primary select-plan" data-toggle="modal" data-target="#myModal" fdprocessedid="3u0g8a">Select Plan</button>
+        <br>
+        <br>
+    </div>
+    <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <p>Copyright 2023 &copy; Virendra Pratap Singh</p>
+            </div>
+            <div class="col-sm-6">
+              <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6">
+              <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Facebook</a></li>
+                <li class="list-inline-item"><a href="#">Twitter</a></li>
+                <li class="list-inline-item"><a href="#">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script src="/index.js"></script>
+
+
+</body>
+</html>
